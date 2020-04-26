@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2>Enregistrer un nouveau article</h2>
+    <form [formGroup]="forumForm" (ngSubmit)="onSaveForum()">
+      <div class="form-group">
+        <label for="title">Titre</label>
+        <input type="text" id="title"
+               class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="author">Auteur</label>
+        <input type="text" id="author"
+               class="form-control" formControlName="author">
+      </div>
+
+      <div class="form-group">
+        <h4>Ajouter une photo</h4>
+        <input type="file" (change)="detectFiles($event)"
+               class="form-control" accept="image/*">
+        <p class="text-success" *ngIf="fileUploaded">Fichier chargé !</p>
+      </div>
+
+      <button class="btn btn-success" [disabled]="forumForm.invalid || fileIsUploading"
+              type="submit">Enregistrer
+      </button>
+
+    </form>
+  </div>
+</div>

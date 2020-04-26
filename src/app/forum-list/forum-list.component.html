@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Vos Articles</h2>
+    <div class="list-group">
+      <button
+        class="list-group-item"
+        *ngFor="let forum of forum; let i = index"
+        (click)="onViewForum(i)">
+        <h3 class="list-group-item-heading">
+          {{ forum.title }}
+          <button class="btn btn-default pull-right" (click)="onDeleteForum(forum)">
+            <span class="glyphicon glyphicon-minus"></span>
+          </button>
+        </h3>
+        <p class="list-group-item-text">{{ forum.author }}</p>
+      </button>
+    </div>
+    <button class="btn btn-primary" (click)="onNewForum()">Nouveau article</button>
+  </div>
+</div>

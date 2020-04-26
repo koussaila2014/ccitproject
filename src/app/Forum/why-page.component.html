@@ -1,0 +1,38 @@
+<div class="toolbar-nav-buttons">
+  <div class="carousel-container">
+  <mdb-carousel [animation]="'slide'">
+    <mdb-carousel-item *ngFor="let slide of slides; let i = index">
+      <div class="carousel-image-container">
+        <img class="d-block w-100 carousel-image" src={{slide}} alt="Slide image">
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+  </div>
+
+
+  <mat-card class="main-container overlap-up home-card mat-elevation-z0">
+    <mat-card-content>
+      <div class="card-top-text-container">
+        <h1 style="margin-left: 0px;">Forum</h1>
+        
+        <div style="width: 75%; margin: 0 auto;">
+          <mat-divider style="margin-top: 50px;" [inset]="true"></mat-divider>
+        </div>
+      </div>
+          <div>
+            
+
+          </div>
+
+            <div>
+              
+
+
+              
+            </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

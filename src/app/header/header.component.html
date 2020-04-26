@@ -1,0 +1,40 @@
+<div class="top-color-bar"></div>
+<mat-toolbar class="mat-elevation-z0 transparent" style="min-height: 80px">
+  <div class="toolbar-content">
+    <img class="logo" src="assets/sp-logo.png" alt="Logo" width="50px">
+    <span class="title-text" routerLink="/home" >Anciens CCI</span>
+    <div class="toolbar-nav-buttons">
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/home">Accueil</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/serviecs">Le Master</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/statistics">Statistiques</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/forum">Forum</button>
+     <!--
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/contact">Inscription</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/about">Connexion</button>
+     -->
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="auth/signup" *ngIf="!isAuth" >Créer un compte</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="auth/signin" *ngIf="!isAuth" >Se Connecter</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="auth/signin" (click)="onSignOut()" *ngIf="isAuth" style="cursor: pointer" >Se Deonnecter</button>
+
+    </div>
+
+    <!-- Only used on smaller screens (phones) -->
+      <div class="toolbar-menu">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="/home">Accueil</button>
+         <a href="www.google.fr">  <button mat-menu-item color="accent"  >Le Master</button> </a>
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="/statistics">Statistiques</button>
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="/forum">Forum</button>
+          <!--
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="/contact">Inscription</button>
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="/about">Connexion</button>
+          -->
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="auth/signup">Créer un compte</button>
+          <button mat-menu-item color="accent" routerLinkActive="active-list-item" routerLink="auth/signin">Se Connecter</button>
+        </mat-menu>
+      </div>
+  </div>
+</mat-toolbar>
