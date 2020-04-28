@@ -28,6 +28,7 @@ export class ForumFormComponent implements OnInit {
     this.forumForm = this.formBuilder.group({
       title: ['', Validators.required],
       author: ['', Validators.required],
+      text: ['', Validators.required],
       synopsis: ''
     });
   }
@@ -35,7 +36,8 @@ export class ForumFormComponent implements OnInit {
   onSaveForum() {
     const title = this.forumForm.get('title').value;
     const author = this.forumForm.get('author').value;
-    const newForum = new Forum(title, author);
+    const text = this.forumForm.get('text').value;
+    const newForum = new Forum(title, author, text);
     if (this.fileUrl && this.fileUrl !== '') {
       newForum.photo = this.fileUrl;
     }

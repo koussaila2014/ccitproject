@@ -16,7 +16,7 @@ export class SingleForumComponent implements OnInit {
               private router: Router ) { }
 
   ngOnInit() {
-    this.forum = new Forum('', '');
+    this.forum = new Forum('', '', '');
     const id = this.route.snapshot.params['id'];
     this.forumService.getSingleForum(+id).then(
       (forum: Forum) => {
