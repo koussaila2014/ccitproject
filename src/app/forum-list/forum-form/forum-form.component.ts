@@ -29,7 +29,10 @@ export class ForumFormComponent implements OnInit {
       title: ['', Validators.required],
       author: ['', Validators.required],
       text: ['', Validators.required],
+<<<<<<< HEAD
       email: ['', Validators.required],
+=======
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
       synopsis: ''
     });
   }
@@ -38,8 +41,12 @@ export class ForumFormComponent implements OnInit {
     const title = this.forumForm.get('title').value;
     const author = this.forumForm.get('author').value;
     const text = this.forumForm.get('text').value;
+<<<<<<< HEAD
     const email = this.forumForm.get('email').value;
     const newForum = new Forum(title, author, text, email);
+=======
+    const newForum = new Forum(title, author, text);
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
     if (this.fileUrl && this.fileUrl !== '') {
       newForum.photo = this.fileUrl;
     }

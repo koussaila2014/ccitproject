@@ -4,6 +4,17 @@
     <mdb-carousel-item *ngFor="let slide of slides; let i = index">
       <div class="carousel-image-container">
         <img class="d-block w-100 carousel-image" src={{slide}} alt="Slide image">
+<<<<<<< HEAD
+=======
+            <div class="slide-content-box">
+              <h3 class="slide-text" *ngIf="i === 0">Les statistiques du Master CCI</h3>
+              <h3 class="slide-text" *ngIf="i === 1"></h3>
+              <h3 class="slide-text" *ngIf="i === 2"></h3>
+              <h3 class="slide-text" *ngIf="i === 3"></h3>
+              <h3 class="slide-text" *ngIf="i === 4"></h3>
+              <div class="slide-button" *ngIf="i === 4" routerLink="/contact"><h3 style="font-weight:bold;"></h3></div>
+            </div>
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
       </div>
     </mdb-carousel-item>
   

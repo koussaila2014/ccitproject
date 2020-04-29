@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 //import {ChartsModule, WavesModule, ButtonsModule, CarouselModule } from 'angular-bootstrap-md'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { MaterialImports} from './material-imports';
@@ -28,10 +29,13 @@ import { BarChartComponent } from './bar-chart/bar-chart.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
 import { PolarChartComponent } from './polar-chart/polar-chart.component';
+<<<<<<< HEAD
 import { ProfileListComponent } from './profile-list/profile-list.component';
 import { SingleProfileComponent } from './profile-list/single-profile/single-profile.component';
 import { ProfileFormComponent } from './profile-list/profile-form/profile-form.component';
 import {ProfileService} from './services/profile.service';
+=======
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
 
 
 const  appRoutes: Routes = [
@@ -66,10 +70,14 @@ const  appRoutes: Routes = [
     PieChartComponent,
     DoughnutChartComponent,
     PolarChartComponent,
+<<<<<<< HEAD
     ProfileListComponent,
     SingleProfileComponent,
     ProfileFormComponent,
 
+=======
+   
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
 
   ],
   imports: [

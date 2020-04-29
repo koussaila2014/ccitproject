@@ -9,7 +9,14 @@
         <button mat-button color="accent" routerLinkActive="active-list-item" href="https://www.cci.univ-tours.fr/"> Le Master</button></a>
       <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/statistics">Statistiques</button>
       <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/forum">Forum</button>
+<<<<<<< HEAD
       <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/profile">Profiles</button>
+=======
+     <!--
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/contact">Inscription</button>
+      <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="/about">Connexion</button>
+     -->
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
       <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="auth/signup" *ngIf="!isAuth" >Inscription</button>
       <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="auth/signin" *ngIf="!isAuth" >Connexion</button>
       <button mat-button color="accent" routerLinkActive="active-list-item" routerLink="auth/signin" (click)="onSignOut()" *ngIf="isAuth" style="cursor: pointer" >Déconnexion</button>

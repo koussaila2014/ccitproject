@@ -50,9 +50,12 @@ export class BarChartComponent implements OnInit {
 
   ngOnInit() {
   }
+<<<<<<< HEAD
  
   //onBack() {
   //  this.router.navigate(['/statistics']);
   //}
+=======
+>>>>>>> fe5e59ea9767754d29950867f888ab29f1e17cc0
 
 }
