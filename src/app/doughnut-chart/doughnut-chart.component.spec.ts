@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WhyPageComponent } from './why-page.component';
+import { DoughnutChartComponent } from './doughnut-chart.component';
 
-describe('WhyPageComponent', () => {
-  let component: WhyPageComponent;
-  let fixture: ComponentFixture<WhyPageComponent>;
+describe('DoughnutChartComponent', () => {
+  let component: DoughnutChartComponent;
+  let fixture: ComponentFixture<DoughnutChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhyPageComponent ]
+      declarations: [ DoughnutChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WhyPageComponent);
+    fixture = TestBed.createComponent(DoughnutChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

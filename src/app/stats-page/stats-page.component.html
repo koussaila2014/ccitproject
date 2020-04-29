@@ -4,54 +4,55 @@
     <mdb-carousel-item *ngFor="let slide of slides; let i = index">
       <div class="carousel-image-container">
         <img class="d-block w-100 carousel-image" src={{slide}} alt="Slide image">
-            <div class="slide-content-box">
-              <h3 class="slide-text" *ngIf="i === 0">Les statistiques du Master CCI</h3>
-              <h3 class="slide-text" *ngIf="i === 1">We also do other stuff!</h3>
-              <h3 class="slide-text" *ngIf="i === 2">And some more!</h3>
-              <h3 class="slide-text" *ngIf="i === 3">Maybe even that kinda stuff!</h3>
-              <h3 class="slide-text" *ngIf="i === 4">So what do you think?</h3>
-              <div class="slide-button" *ngIf="i === 4" routerLink="/contact"><h3 style="font-weight:bold;">Contact us</h3></div>
-            </div>
       </div>
     </mdb-carousel-item>
-
+  
+    <div class="slide-content-box">
+      <h3 class="slide-text">Bienvenue dans le réseau des anciens  </h3>
+      <br>
+      <h3 class="slide-text"> étudiants du master CCI </h3>
+      <br>
+      <h3 class="slide-text">Université de Tours</h3>
+  
+      <div class="slide-button" routerLink="auth/signin"><h3 style="font-weight:bold;">Se connecter</h3></div>
+    </div>
+  
   </mdb-carousel>
   </div>
 
 
-  <mat-card class="main-container overlap-up home-card mat-elevation-z0">
+  <mat-card class="main-container overlap-up home-card mat-elevation-z0" style="width:70%;">
     <mat-card-content>
       <div class="card-top-text-container">
-        <h1 style="margin-left: 0px;">Statistiques des anciens CCI</h1>
+        <h1>Statistiques</h1>
         <p>
-          Veuillez trouver ci dessous, les dernières statistiques des anciens CCI
+          Veuillez trouver ci dessous, <br>
+
+          les dernières statistiques des anciens CCI
         </p>
-        <div style="width: 75%; margin: 0 auto;">
-          <mat-divider style="margin-top: 50px;" [inset]="true"></mat-divider>
-        </div>
+        
       </div>
 
-      <h2>Statistique 2018-2019</h2>
-      <!--
-      To change the charts go into their directory located in this folder and change the data in the .ts files.
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/type-employeur">Type d'employeur</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/moyen-obtention-emploi">Moyen d'obtention d'emploi</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/spécialité-informatique">Spécialité informatique</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/secteur-activité">Secteur d'activité</a>
+    </li>
+  </ul>
 
-      See avalible charts here: https://mdbootstrap.com/docs/angular/advanced/charts/
-
-      If you want more charts follow this quick guide:
-      1. In terminal cd to project-name (corporate-website-template).
-      2. type: ng generate component stats-page/<chart-name> (e.g. stats-page/bar-chart-2).
-      3. Copy html-content from other chart to bar-chart2.component.html.
-      4. The same with the .ts file, but only the content after line 9.
-      -->
-
-      <p>
-        Ego vero sic intellego, Patres conscripti, 
-        nos hoc tempore in provinciis decernendis perpetuae pacis habere oportere rationem. 
-        Nam quis hoc non sentit omnia alia esse nobis vacua ab omni periculo atque etiam 
-        suspicione belli?
-      </p>
-
-     
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
 
     </mat-card-content>
 

@@ -9,11 +9,11 @@ import { LanguageService } from '../language.service';
 export class StatsPageComponent implements OnInit {
 
   slides: string[] = [
-    'assets/beach_bridge.jpg',
-    'assets/alps_lake.jpg',
-    'assets/dragon_boat.jpg',
-    'assets/paper_art.jpg',
-    'assets/snow_structure.jpg',
+    'assets/home.jpg',
+    'assets/master.jpg',
+    'assets/stats.jpg',
+    'assets/biblio.jpg',
+    'assets/forum.jpg',
   ];
 
   language: string;
